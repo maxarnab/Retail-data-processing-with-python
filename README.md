@@ -1,65 +1,59 @@
-Unique Product Category Extractor
+# Unique Product Category Extractor
 
-This project provides a Python script for processing a retail transaction CSV file. It reads the dataset, extracts all unique product categories using a set, and counts the number of distinct customers associated with each category. The script demonstrates practical use of CSV handling, basic data cleaning, and Python data structures.
+A Python mini project that processes a retail transaction CSV file to extract all unique product categories and count distinct customers for each category. This project demonstrates practical data cleaning, CSV handling, and use of Python data structures.
 
-Features
+## Features
 
-Reads a CSV file containing retail transaction data
+- Reads and processes a retail transaction CSV file  
+- Extracts unique product categories using a set  
+- Counts distinct customers per category  
+- Handles missing or empty fields safely  
+- Outputs categories in sorted order  
+- Uses only standard Python libraries
 
-Extracts all unique product categories
+## Project Structure
 
-Counts distinct customers per category
-
-Handles missing or empty fields gracefully
-
-Outputs categories in sorted order
-
-File Structure
+```
 project/
     extract_unique_categories.py
     sample_data.csv (optional)
     README.md
+```
 
-Requirements
+## Requirements
 
-Python 3.7 or higher
+- Python 3.7 or higher  
+- No external packages required
 
-No external libraries are required. The script uses only standard Python modules.
+## CSV Format
 
-Usage
+The script expects a CSV file with the following columns:
 
-Place your CSV file in the project directory.
+- transaction_id  
+- customer_id  
+- product_category  
+- amount  
 
-Update the filename variable in extract_unique_categories.py if necessary.
+If your column names differ, you may adjust the code accordingly.
 
-Run the script:
+## How to Use
 
+1. Place your CSV file in the project directory.  
+2. Update the `filename` variable inside `extract_unique_categories.py` if needed.  
+3. Run the script:
+
+```
 python extract_unique_categories.py
+```
 
+4. The script will print:
+   - Total number of unique product categories  
+   - A sorted list of all categories  
+   - The number of distinct customers per category  
 
-The script will print:
+## Example Output
 
-The number of unique product categories
-
-A sorted list of categories
-
-The number of distinct customers per category
-
-CSV Format
-
-The script expects a CSV file containing at least the following columns:
-
-transaction_id
-
-customer_id
-
-product_category
-
-amount
-
-Column names should match exactly unless modified in the code.
-
-Example Output
+```
 Unique product categories count: 12
 Unique product categories (sorted):
 - Books
@@ -72,7 +66,8 @@ Distinct customer counts per category:
 - Clothing: 93
 - Electronics: 132
 ...
+```
 
-Purpose
+## Purpose
 
-This project serves as a basic example of data processing using Python. It is suitable for learning, teaching, or demonstration of fundamental data handling techniques.
+This project is designed to demonstrate core data processing techniques in Python, including CSV parsing, data validation, and the use of sets and dictionaries. It is suitable for learners and anyone exploring basic data engineering tasks.
